@@ -5,7 +5,7 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
-import { setError, setLoading, setUser } from './authSlice';
+import { setError, setLoading, setUser } from '../store/auth/authSlice';
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 

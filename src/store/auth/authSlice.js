@@ -22,8 +22,12 @@ const authSlice = createSlice({
       state.loading = false;
       state.error = null;
     },
+    setShowAuthForm: (state, action) => {
+      state.showAuthForm = action.payload;
+    },
   },
 });
 
-export default authSlice.reducer;
-export const { setUser, setLoading, setError, logout } = authSlice.actions;
+export const authReducer = authSlice.reducer;
+export const { setUser, setLoading, setError, logout, setShowAuthForm } =
+  authSlice.actions;

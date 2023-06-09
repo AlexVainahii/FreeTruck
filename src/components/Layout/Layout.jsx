@@ -1,9 +1,7 @@
 import { Link, Outlet } from 'react-router-dom';
 import {
   Container,
-  Content,
   Header,
-  MainContent,
   ResponsiveLayout,
   Sidebar,
   Navigation,
@@ -26,22 +24,28 @@ const Layout = () => {
             </Link>
           </Header>
 
-          {!user && (
+          {!user ? (
             <Navigation>
               <NavigationLink to="/">Головна</NavigationLink>
               <NavigationLink to="/about">Про нас</NavigationLink>
-              <NavigationLink to="/contact">Контакти</NavigationLink>
+              <NavigationLink to="/contacts">Контакти</NavigationLink>
+            </Navigation>
+          ) : (
+            <Navigation>
+              <NavigationLink to="/">Головна</NavigationLink>
+              <NavigationLink to="/carrier">Перевізникам</NavigationLink>
+              <NavigationLink to="/cargo_owner">
+                Власникам вантажу
+              </NavigationLink>
+              <NavigationLink to="/about">Про нас</NavigationLink>
+              <NavigationLink to="/contacts">Контакти</NavigationLink>
             </Navigation>
           )}
           <AuthFormContainer>
             <AuthForm />
           </AuthFormContainer>
         </Sidebar>
-        <Content>
-          <MainContent>
-            <Outlet />
-          </MainContent>
-        </Content>
+        <Outlet />
       </Container>
     </ResponsiveLayout>
   );

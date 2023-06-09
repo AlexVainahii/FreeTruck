@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLoading, setError } from '../../store/auth/authSlice';
+import {
+  setLoading,
+  setError,
+  setShowAuthForm,
+} from '../../store/auth/authSlice';
 import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import GoogleIcon from '@mui/icons-material/Google';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { login, loginWithGoogle, logout } from '../../store/auth/authActions';
+import { login, loginWithGoogle, logout } from '../../service/authActions';
 
 import {
   AuthFormContainer,
@@ -21,14 +25,14 @@ import {
 const AuthForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [showAuthForm, setShowAuthForm] = useState(false);
+  const showAuthForm = useSelector(state => state.auth.showAuthForm);
   const loading = useSelector(state => state.auth.loading);
   const error = useSelector(state => state.auth.error);
   const successMessage = useSelector(state => state.auth.successMessage);
   const dispatch = useDispatch();
 
   const handleToggleAuthForm = () => {
-    setShowAuthForm(!showAuthForm);
+    dispatch(setShowAuthForm(!showAuthForm));
   };
 
   const handleRegister = async e => {
@@ -73,7 +77,7 @@ const AuthForm = () => {
     try {
       dispatch(setError(null));
       dispatch(setLoading(true));
-      setShowAuthForm(!showAuthForm);
+      dispatch(setShowAuthForm(false));
       await dispatch(logout());
     } catch (error) {
       console.log('Logout error:', error);

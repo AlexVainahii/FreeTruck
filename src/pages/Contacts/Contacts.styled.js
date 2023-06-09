@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import FonImage from '../../images/Home.jpg';
+import FonImage from '../../images/Contact.jpg';
 
-export const HomeContainer = styled.div`
-  text-align: center;
+export const ContactContainer = styled.div`
   max-width: 80%;
   max-height: 80%;
   padding: 20px;
@@ -20,8 +19,16 @@ export const Subtitle = styled.p`
   margin-bottom: 10px;
 `;
 
-export const Description = styled.p`
-  margin-bottom: 20px;
+export const ContactInfo = styled.div`
+  margin-bottom: 10px;
+`;
+
+export const Label = styled.span`
+  font-weight: bold;
+`;
+
+export const Link = styled.a`
+  color: #007bff;
 `;
 export const Content = styled.div`
   height: 100vh;
@@ -31,24 +38,6 @@ export const Content = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-`;
-export const Highlight = styled.p`
-  font-size: 16px;
-  font-weight: bold;
-  color: #106701;
-`;
-export const Button = styled.button`
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  &:hover {
-    background-color: yellow;
-    color: #000;
-  }
 `;
 export const MainContent = styled.div`
   width: 100%;
