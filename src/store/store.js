@@ -10,7 +10,9 @@ import {
   REGISTER,
 } from 'redux-persist';
 import { authReducer } from './auth/authSlice';
+import { itemsReducer } from './items/itemsSlice';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
+
 const middleware = [
   ...getDefaultMiddleware({
     serializableCheck: {
@@ -19,14 +21,22 @@ const middleware = [
   }),
 ];
 
-const persistConfig = {
+const authPersistConfig = {
   key: 'auth',
   storage,
 };
-const persistedReducer = persistReducer(persistConfig, authReducer);
+
+const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
+
+const itemPersistConfig = {
+  key: 'items',
+  storage,
+};
+
+const persistedItemReducer = persistReducer(itemPersistConfig, itemsReducer);
 
 export const store = configureStore({
-  reducer: { auth: persistedReducer },
+  reducer: { auth: persistedAuthReducer, items: persistedItemReducer },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
 });

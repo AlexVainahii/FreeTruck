@@ -144,11 +144,15 @@ const AuthForm = () => {
                 </form>
               ) : (
                 <div>
-                  <p>
-                    Welcome,
-                    {user.displayName}
-                  </p>
                   <AuthFormButtonContainer>
+                    <p
+                      style={{
+                        color: '#fff',
+                        marginRight: '10px',
+                      }}
+                    >
+                      {user.displayName}
+                    </p>
                     <AuthFormButton
                       onClick={handleLogout}
                       title="Вийти із системи"

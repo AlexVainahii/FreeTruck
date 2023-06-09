@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setShowAuthForm } from 'store/auth/authSlice';
 
 const HomePage = () => {
-  const showAuthForm = useSelector(state => state.auth.showAuthForm);
+  const user = useSelector(state => state.auth.user);
   const dispatch = useDispatch();
   const handleToggleAuthForm = () => {
     dispatch(setShowAuthForm(true));
@@ -29,7 +29,9 @@ const HomePage = () => {
             його в будь-яке місце.
           </Description>
           <Highlight>Зручно. Безпечно. Швидко.</Highlight>
-          <Button onClick={handleToggleAuthForm}>Увійти в систему</Button>
+          {!user && (
+            <Button onClick={handleToggleAuthForm}>Увійти в систему</Button>
+          )}
         </HomeContainer>
       </MainContent>
     </Content>

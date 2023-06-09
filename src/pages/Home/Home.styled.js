@@ -6,7 +6,7 @@ export const HomeContainer = styled.div`
   max-width: 80%;
   max-height: 80%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.8);
 `;
 
 export const Title = styled.h1`
