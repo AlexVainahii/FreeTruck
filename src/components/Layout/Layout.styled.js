@@ -14,7 +14,7 @@ const Sidebar = styled.div`
   background-size: cover;
   background-position: 0% 50%;
 
-  height: 100vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
 `;

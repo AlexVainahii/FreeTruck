@@ -11,7 +11,12 @@ import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import GoogleIcon from '@mui/icons-material/Google';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { login, loginWithGoogle, logout } from '../../service/authActions';
+import {
+  login,
+  loginWithGoogle,
+  logout,
+  register,
+} from '../../service/authActions';
 
 import {
   AuthFormContainer,
@@ -40,6 +45,7 @@ const AuthForm = () => {
     dispatch(setLoading(true));
     dispatch(setError(null));
     try {
+      await dispatch(register(email, password));
     } catch (error) {
       dispatch(setError(error.message));
     }
@@ -151,7 +157,7 @@ const AuthForm = () => {
                         marginRight: '10px',
                       }}
                     >
-                      {user.displayName}
+                      {user.displayName ? user.displayName : user.email}
                     </p>
                     <AuthFormButton
                       onClick={handleLogout}

@@ -37,6 +37,7 @@ const Layout = () => {
               <NavigationLink to="/cargo_owner">
                 Власникам вантажу
               </NavigationLink>
+              <NavigationLink to="/create">Створити замовлення</NavigationLink>
               <NavigationLink to="/about">Про нас</NavigationLink>
               <NavigationLink to="/contacts">Контакти</NavigationLink>
             </Navigation>

@@ -22,7 +22,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const itemsSlice = createSlice({
   name: 'items',
-  initialState: [transportations],
+  initialState: transportations,
   reducers: {
     addItem: async (state, action) => {
       const newItem = action.payload;
