@@ -83,6 +83,8 @@ const AuthForm = () => {
 
   const handleLogout = async () => {
     try {
+      setEmail('');
+      setPassword('');
       dispatch(setError(null));
       dispatch(setLoading(true));
       dispatch(setShowAuthForm(false));
