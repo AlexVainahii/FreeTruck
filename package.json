@@ -20,7 +20,6 @@
     "mapbox-gl": "^2.15.0",
     "nanoid": "^4.0.2",
     "react": "^18.1.0",
-    "react-autocomplete": "^1.8.1",
     "react-dom": "^18.1.0",
     "react-google-autocomplete": "^2.7.3",
     "react-map-gl": "^6.1.17",
