@@ -1,4 +1,6 @@
 import { Link, Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Container,
   Header,
@@ -37,11 +39,13 @@ const Layout = () => {
               <NavigationLink to="/cargo_owner">
                 Власникам вантажу
               </NavigationLink>
+              <NavigationLink to="/myship">Мої перевезення</NavigationLink>
               <NavigationLink to="/create">Створити замовлення</NavigationLink>
               <NavigationLink to="/about">Про нас</NavigationLink>
               <NavigationLink to="/contacts">Контакти</NavigationLink>
             </Navigation>
           )}
+          <ToastContainer />
           <AuthFormContainer>
             <AuthForm />
           </AuthFormContainer>

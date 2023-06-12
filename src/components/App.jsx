@@ -6,6 +6,7 @@ import Contacts from 'pages/Contacts/Contacts';
 import Carrier from 'pages/Carrier/Carrier';
 import CargoOwner from 'pages/CargoOwner/CargoOwner';
 import CreateTransportationForm from 'pages/CreateTransportationForm/CreateTransportationForm';
+import MyShip from 'pages/MyShip/MyShip';
 
 export const App = () => {
   return (
@@ -17,6 +18,7 @@ export const App = () => {
         <Route path="about" element={<About />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="create" element={<CreateTransportationForm />} />
+        <Route path="myship" element={<MyShip />} />
       </Route>
     </Routes>
   );

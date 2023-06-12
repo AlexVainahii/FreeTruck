@@ -11,6 +11,7 @@ import {
 } from 'redux-persist';
 import { authReducer } from './auth/authSlice';
 import { itemsReducer } from './items/itemsSlice';
+import { getItemsReducer } from './getItems/getItems';
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
 const middleware = [
@@ -28,15 +29,28 @@ const authPersistConfig = {
 
 const persistedAuthReducer = persistReducer(authPersistConfig, authReducer);
 
-const itemPersistConfig = {
+const itemsPersistConfig = {
   key: 'items',
   storage,
 };
 
-const persistedItemReducer = persistReducer(itemPersistConfig, itemsReducer);
+const persistedItemsReducer = persistReducer(itemsPersistConfig, itemsReducer);
+const getItemPersistConfig = {
+  key: 'getItems',
+  storage,
+};
+
+const persistedGetItemReducer = persistReducer(
+  getItemPersistConfig,
+  getItemsReducer
+);
 
 export const store = configureStore({
-  reducer: { auth: persistedAuthReducer, items: persistedItemReducer },
+  reducer: {
+    auth: persistedAuthReducer,
+    items: persistedItemsReducer,
+    getItems: persistedGetItemReducer,
+  },
   middleware,
   devTools: process.env.NODE_ENV === 'development',
 });

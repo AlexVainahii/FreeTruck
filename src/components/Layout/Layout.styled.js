@@ -38,14 +38,14 @@ export const Navigation = styled.nav`
   display: flex;
   flex-direction: column;
   width: 80%;
-  margin-left: 90px;
+  margin-left: 25px;
   z-index: 5;
 `;
 
 export const NavigationLink = styled(NavLink)`
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   display: block;
-  padding: 10px;
+  padding: 8px;
   text-align: center;
   color: #fff;
   background-color: #007bff;

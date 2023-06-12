@@ -41,7 +41,7 @@ export const register = (email, password) => async dispatch => {
       setUser({
         uid: user.uid,
         email: user.email,
-        displayName: user.displayName,
+        displayName: user.email,
       })
     );
     dispatch(setLoading(false));
@@ -64,7 +64,7 @@ export const login = (email, password) => async dispatch => {
       setUser({
         uid: user.uid,
         email: user.email,
-        displayName: user.displayName,
+        displayName: user.email,
       })
     );
     dispatch(setLoading(false));

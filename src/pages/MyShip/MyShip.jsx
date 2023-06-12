@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Content, MainContent, Title, TitleContainer } from './Carrier.styled';
+import { Content, MainContent, Title, TitleContainer } from './MyShip.styled';
 import TransportationList from '../../components/TransportationList/TransportationList';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchItems } from '../../store/getItems/getItems';
 import TransportationFilter from '../../components/TransportationFilter/TransportationFilter';
 
-const Carrier = () => {
+const MyShip = () => {
   const user = useSelector(state => state.auth.user);
   const dispatch = useDispatch();
   const allTransportations = useSelector(state => state.getItems.items);
@@ -19,7 +19,8 @@ const Carrier = () => {
   useEffect(() => {
     // Фільтрувати початковий масив
     const FilteredItems = allTransportations.filter(
-      item => item.carrier === false && item.customer !== user.displayName
+      item =>
+        item.carrier === user.displayName || item.customer === user.displayName
     );
     console.log(FilteredItems, user.displayName);
     setFilteredTransportations(FilteredItems);
@@ -60,7 +61,7 @@ const Carrier = () => {
       {user && (
         <>
           <TitleContainer>
-            <Title>Потребують перевізників</Title>
+            <Title>Мої перевезення</Title>
             <TransportationFilter
               initialFilters={initialFilters}
               onFilterChange={handleFilterChange}
@@ -71,7 +72,7 @@ const Carrier = () => {
           <MainContent>
             <TransportationList
               transportations={filteredTransportations}
-              onButton={false}
+              onButton={true}
             />
           </MainContent>
         </>
@@ -80,4 +81,4 @@ const Carrier = () => {
   );
 };
 
-export default Carrier;
+export default MyShip;

@@ -10,7 +10,6 @@ export const transportations = [
     carBrand: 'Mercedes-Benz',
     startDate: '2023-06-01',
     endDate: '2023-06-05',
-    routeCities: ['Біла Церква', 'Полтава'],
     distance: 471,
   },
   {
@@ -24,7 +23,6 @@ export const transportations = [
     carBrand: 'Volvo',
     startDate: '2023-06-02',
     endDate: '2023-06-06',
-    routeCities: ['Тернопіль', 'Вінниця', 'Миколаїв'],
     distance: 700,
   },
   {
@@ -38,7 +36,6 @@ export const transportations = [
     carBrand: 'Scania',
     startDate: '2023-06-03',
     endDate: '2023-06-07',
-    routeCities: ['Полтава', 'Запоріжжя'],
     distance: 337,
   },
   {
@@ -52,7 +49,6 @@ export const transportations = [
     carBrand: 'MAN',
     startDate: '2023-06-04',
     endDate: '2023-06-08',
-    routeCities: ['Запоріжжя', 'Кропивницький', 'Черкаси'],
     distance: 379,
   },
   {
@@ -66,7 +62,6 @@ export const transportations = [
     carBrand: 'Iveco',
     startDate: '2023-06-05',
     endDate: '2023-06-09',
-    routeCities: ['Миколаїв', 'Вінниця', 'Тернопіль'],
     distance: 773,
   },
   {
@@ -80,7 +75,6 @@ export const transportations = [
     carBrand: 'DAF',
     startDate: '2023-06-06',
     endDate: '2023-06-10',
-    routeCities: ['Кропивницький', 'Полтава'],
     distance: 234,
   },
   {
@@ -94,7 +88,6 @@ export const transportations = [
     carBrand: 'Renault',
     startDate: '2023-06-07',
     endDate: '2023-06-11',
-    routeCities: ['Київ', 'Вінниця', 'Миколаїв'],
     distance: 538,
   },
   {
@@ -108,7 +101,6 @@ export const transportations = [
     carBrand: 'Mercedes-Benz',
     startDate: '2023-06-08',
     endDate: '2023-06-12',
-    routeCities: ['Львів', 'Вінниця', 'Черкаси'],
     distance: 444,
   },
   {
@@ -122,7 +114,6 @@ export const transportations = [
     carBrand: 'Volvo',
     startDate: '2023-06-09',
     endDate: '2023-06-13',
-    routeCities: ['Одеса', 'Полтава'],
     distance: 581,
   },
   {
@@ -136,7 +127,6 @@ export const transportations = [
     carBrand: 'Scania',
     startDate: '2023-06-10',
     endDate: '2023-06-14',
-    routeCities: ['Київ', 'Кропивницький'],
     distance: 486,
   },
 ];
