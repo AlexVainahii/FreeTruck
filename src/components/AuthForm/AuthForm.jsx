@@ -26,8 +26,10 @@ import {
   AuthFormSuccessMessage,
   AuthFormButtonContainer,
 } from './AuthForm.styled';
+import { useNavigate } from 'react-router-dom';
 
 const AuthForm = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const showAuthForm = useSelector(state => state.auth.showAuthForm);
@@ -84,6 +86,7 @@ const AuthForm = () => {
       dispatch(setError(null));
       dispatch(setLoading(true));
       dispatch(setShowAuthForm(false));
+      navigate('/');
       await dispatch(logout());
     } catch (error) {
       console.log('Logout error:', error);

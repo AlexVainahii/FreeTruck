@@ -30,7 +30,7 @@ const itemsSlice = createSlice({
       try {
         const docRef = await addDoc(collection(db, 'items'), newItem);
         newItem.id = docRef.id;
-        state.items.push(newItem);
+        // state.items.push(newItem);
       } catch (error) {
         console.error('Error adding item:', error);
       }
@@ -41,7 +41,7 @@ const itemsSlice = createSlice({
       try {
         await deleteDoc(doc(db, 'items', itemId.id));
 
-        state = state.items.filter(item => item.id !== itemId.id);
+        // state = state.items.filter(item => item.id !== itemId.id);
       } catch (error) {
         console.error('Error removing item:', error);
       }
@@ -51,11 +51,11 @@ const itemsSlice = createSlice({
       console.log(state.items);
       try {
         await updateDoc(doc(db, 'items', updatedItem.id), updatedItem);
-        const index = state.items.findIndex(item => item.id === updatedItem.id);
+        // const index = state.items.findIndex(item => item.id === updatedItem.id);
 
-        if (index !== -1) {
-          state.items[index] = updatedItem;
-        }
+        // if (index !== -1) {
+        //   state.items[index] = updatedItem;
+        // }
       } catch (error) {
         console.error('Error updating item:', error);
       }

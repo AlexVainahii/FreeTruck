@@ -9,21 +9,23 @@ const Carrier = () => {
   const user = useSelector(state => state.auth.user);
   const dispatch = useDispatch();
   const allTransportations = useSelector(state => state.getItems.items);
-  const [filteredTransportations, setFilteredTransportations] =
-    useState(allTransportations);
+  const [filteredTransportations, setFilteredTransportations] = useState(null);
   const [initialFilters, setInitialFilters] = useState({});
 
   useEffect(() => {
-    dispatch(fetchItems());
+    dispatch(fetchItems);
   }, [dispatch]);
+
   useEffect(() => {
     // Фільтрувати початковий масив
-    const FilteredItems = allTransportations.filter(
-      item => item.carrier === false && item.customer !== user.displayName
-    );
-    console.log(FilteredItems, user.displayName);
-    setFilteredTransportations(FilteredItems);
-  }, [allTransportations]);
+    if (allTransportations) {
+      const FilteredItems = allTransportations.filter(
+        item => item.carrier === false && item.customer !== user.displayName
+      );
+      console.log(FilteredItems, user.displayName);
+      setFilteredTransportations(FilteredItems);
+    }
+  }, [allTransportations, user.displayName]);
 
   const handleFilterChange = filterValues => {
     const { originCity, destinationCity } = filterValues;
@@ -69,10 +71,12 @@ const Carrier = () => {
           </TitleContainer>
 
           <MainContent>
-            <TransportationList
-              transportations={filteredTransportations}
-              onButton={false}
-            />
+            {filteredTransportations && (
+              <TransportationList
+                transportations={filteredTransportations}
+                onButton={false}
+              />
+            )}
           </MainContent>
         </>
       )}
