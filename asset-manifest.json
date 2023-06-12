@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/FreeTruck/static/css/main.b5320759.css",
-    "main.js": "/FreeTruck/static/js/main.44a3d787.js",
+    "main.css": "/FreeTruck/static/css/main.baae1159.css",
+    "main.js": "/FreeTruck/static/js/main.149d9c47.js",
+    "static/media/BackTruck.jpg": "/FreeTruck/static/media/BackTruck.989ff8812f1ead77b167.jpg",
     "static/media/FreeTruck.png": "/FreeTruck/static/media/FreeTruck.a7476dd7a1ad16e03f77.png",
     "static/media/Home.jpg": "/FreeTruck/static/media/Home.b5d6da81020ad11a7795.jpg",
     "static/media/Contact.jpg": "/FreeTruck/static/media/Contact.385a905321b11ddb82f5.jpg",
@@ -10,11 +11,11 @@
     "static/media/Main.jpg": "/FreeTruck/static/media/Main.8a449010947140393e94.jpg",
     "static/media/SideBar.jpg": "/FreeTruck/static/media/SideBar.82770a4d592f1fad5dd8.jpg",
     "index.html": "/FreeTruck/index.html",
-    "main.b5320759.css.map": "/FreeTruck/static/css/main.b5320759.css.map",
-    "main.44a3d787.js.map": "/FreeTruck/static/js/main.44a3d787.js.map"
+    "main.baae1159.css.map": "/FreeTruck/static/css/main.baae1159.css.map",
+    "main.149d9c47.js.map": "/FreeTruck/static/js/main.149d9c47.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5320759.css",
-    "static/js/main.44a3d787.js"
+    "static/css/main.baae1159.css",
+    "static/js/main.149d9c47.js"
   ]
 }
