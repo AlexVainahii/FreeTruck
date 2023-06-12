@@ -27,6 +27,10 @@ const TransportationList = ({ transportations, onButton }) => {
       carrierTrue: true,
     };
     dispatch(updateItem(updatedItems));
+    setTimeout(() => {
+      // Оновлення сторінки
+      window.location.reload();
+    }, 2000);
   };
   const handleChangeCostumer = transportations => {
     const updatedItems = {
@@ -37,6 +41,10 @@ const TransportationList = ({ transportations, onButton }) => {
       cargoWeight: transportations.maxWeight,
     };
     dispatch(updateItem(updatedItems));
+    setTimeout(() => {
+      // Оновлення сторінки
+      window.location.reload();
+    }, 2000);
   };
   const handleChangeCarrierTrue = transportations => {
     const updatedItems = {
@@ -46,6 +54,10 @@ const TransportationList = ({ transportations, onButton }) => {
       shipmentTrue: true,
     };
     dispatch(updateItem(updatedItems));
+    setTimeout(() => {
+      // Оновлення сторінки
+      window.location.reload();
+    }, 2000);
   };
   const handleChangeCostumerTrue = transportations => {
     const updatedItems = {
@@ -55,6 +67,10 @@ const TransportationList = ({ transportations, onButton }) => {
       shipmentTrue: true,
     };
     dispatch(updateItem(updatedItems));
+    setTimeout(() => {
+      // Оновлення сторінки
+      window.location.reload();
+    }, 2000);
   };
   const handleCancelTrue = transportations => {
     if (
@@ -68,6 +84,10 @@ const TransportationList = ({ transportations, onButton }) => {
         customer: false,
       };
       dispatch(updateItem(updatedItems));
+      setTimeout(() => {
+        // Оновлення сторінки
+        window.location.reload();
+      }, 2000);
     } else {
       const updatedItems = {
         id: transportations.id,
@@ -76,6 +96,10 @@ const TransportationList = ({ transportations, onButton }) => {
         carrier: false,
       };
       dispatch(updateItem(updatedItems));
+      setTimeout(() => {
+        // Оновлення сторінки
+        window.location.reload();
+      }, 2000);
     }
   };
   const handleDelete = transportations => {
@@ -83,6 +107,10 @@ const TransportationList = ({ transportations, onButton }) => {
       id: transportations.id,
     };
     dispatch(removeItem(removeItems));
+    setTimeout(() => {
+      // Оновлення сторінки
+      window.location.reload();
+    }, 2000);
   };
   return (
     <Container>

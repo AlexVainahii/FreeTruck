@@ -24,7 +24,7 @@ const MyShip = () => {
     );
     console.log(FilteredItems, user.displayName);
     setFilteredTransportations(FilteredItems);
-  }, [allTransportations]);
+  }, [allTransportations, user.displayName]);
 
   const handleFilterChange = filterValues => {
     const { originCity, destinationCity } = filterValues;

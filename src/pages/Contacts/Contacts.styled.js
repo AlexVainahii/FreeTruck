@@ -31,7 +31,7 @@ export const Link = styled.a`
   color: #007bff;
 `;
 export const Content = styled.div`
-  height: 100vh;
+  height: 98vh;
   max-width: calc(100% - 300px);
   flex-grow: 1;
   background-image: url(${FonImage});

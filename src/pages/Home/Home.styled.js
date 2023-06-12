@@ -24,7 +24,7 @@ export const Description = styled.p`
   margin-bottom: 20px;
 `;
 export const Content = styled.div`
-  height: 100vh;
+  height: 98vh;
   max-width: calc(100% - 300px);
   flex-grow: 1;
   background-image: url(${FonImage});
