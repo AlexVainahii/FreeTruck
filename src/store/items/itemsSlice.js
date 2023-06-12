@@ -48,7 +48,6 @@ const itemsSlice = createSlice({
     },
     updateItem: async (state, action) => {
       const updatedItem = action.payload;
-      console.log(state.items);
       try {
         await updateDoc(doc(db, 'items', updatedItem.id), updatedItem);
         // const index = state.items.findIndex(item => item.id === updatedItem.id);
